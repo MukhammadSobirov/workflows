@@ -12,7 +12,4 @@ jobs:
         with:
           actions: 'new-issue'
           token: ${{ secrets.GITHUB_TOKEN }}
-          issue_title: 'New Issue: ${{ github.event.issue.title }}'
-          issue_body: 'New Issue Body: ${{ github.event.issue.body }}'
-          labels: 'bug, help wanted: ${{ github.event.issue.title }}'
-          assignees: 'actions-cool: ${{ github.event.issue.title }}'
+          runs: 'new-issue ${{ github.event.issue}}'
